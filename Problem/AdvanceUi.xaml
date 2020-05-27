@@ -1,0 +1,274 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AdvanceUi" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="709.6,809.6" sap2010:WorkflowViewState.IdRef="AdvanceUi_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="AdvanceUi" sap:VirtualizedContainerService.HintSize="689.6,749.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="flipkartElement" />
+      <Variable x:TypeArguments="x:Boolean" Name="imageFound" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="price" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">290,2.4</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">320,77.6 320,113.6</av:PointCollection>
+        <x:Double x:Key="Height">712.8</x:Double>
+        <x:Double x:Key="Width">656</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID7</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">230,445.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">330,514.4 330,586.4</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[flipkartElement]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+          <ui:UiElementExists.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="893aef675074586425cd63646bedde28" Selector="&lt;html app='chrome.exe' title='Mi LED Smart TV 4A Pro 108 cm (43) with Android Online at best P*' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h1&amp;gt;span' isleaf='1' tag='SPAN' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:UiElementExists.Target>
+        </ui:UiElementExists>
+      </Sequence>
+      <FlowStep.Next>
+        <FlowDecision x:Name="__ReferenceID0" Condition="[flipkartElement]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <av:Point x:Key="ShapeLocation">290.4,586.4</av:Point>
+              <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+              <av:PointCollection x:Key="TrueConnector">290.4,630 200,630</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">369.6,630 450,630</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowDecision.True>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">0,603.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="07bd65d6ea354b6f15bc3a3b4c03584f" Selector="&lt;html app='chrome.exe' title='Mi LED Smart TV 4A Pro 108 cm (43) with Android Online at best P*' /&gt;&lt;webctrl aaname='Flipkart' tag='IMG' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:Click>
+            </FlowStep>
+          </FlowDecision.True>
+          <FlowDecision.False>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">450,603.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;No Element&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+            </FlowStep>
+          </FlowDecision.False>
+        </FlowDecision>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <FlowStep x:Name="__ReferenceID7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">220,113.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">320,166.4 320,216.4</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ImageFound DisplayName="Image Exists 'chrome.exe Mi'" Found="[imageFound]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+        <ui:ImageFound.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+        </ui:ImageFound.Image>
+        <ui:ImageFound.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Online Shopping Site for Mobiles, Electronics, Furniture, Grocer*' /&gt;" TimeoutMS="0">
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:ImageFound.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ImageFound>
+      <FlowStep.Next>
+        <FlowDecision x:Name="__ReferenceID3" Condition="[imageFound]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <av:Point x:Key="ShapeLocation">280.4,216.4</av:Point>
+              <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+              <av:PointCollection x:Key="TrueConnector">280.4,260 200,260</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">359.6,260 430,260</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowDecision.True>
+            <FlowStep x:Name="__ReferenceID4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">0,233.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">100,286.4 100,325.02</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dbe406c4e3340a7c97b124dd2d3fa242" Selector="&lt;html app='chrome.exe' title='Mi LED 55 inch Smart TV - Buy Mi LED Smart TV 4 Pro 55 inch Onli*' /&gt;&lt;webctrl aaname='₹47,999' parentid='container' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[price]</OutArgument>
+                </ui:GetValue.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetValue>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,325.02</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[price]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:MessageBox>
+                </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowDecision.True>
+          <FlowDecision.False>
+            <FlowStep x:Name="__ReferenceID6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">430,233.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Web site has been not loaded properly&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+            </FlowStep>
+          </FlowDecision.False>
+        </FlowDecision>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+  </Flowchart>
+</Activity>
