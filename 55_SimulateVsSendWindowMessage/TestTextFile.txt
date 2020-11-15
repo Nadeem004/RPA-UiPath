@@ -1,7 +1,0 @@
-Add an Assign activity to the Designer panel.
-In the Properties panel, in the To field, add the Today variable.
-In the Value field, type Now. This gives you the date and time when the project is executed, in the dd/MM/yyyy and hh:mm:ss formats.
-Add another Assign activity under the previous one.
-In the Properties panel, in the To field, add the LastTime variable.
-In the Value field, type Today.Subtract(Span). This is going to subtract the default value of the Span variable from the current date and time, stored in the Today variable.
-Add an Excel Application Scope activity under the last Assign one

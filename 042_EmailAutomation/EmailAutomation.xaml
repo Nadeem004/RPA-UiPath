@@ -66,7 +66,7 @@
           <av:Size x:Key="ShapeSize">200,68.8</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Download Email Attachment" sap:VirtualizedContainerService.HintSize="637.6,977.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Download Email Attachment" sap:VirtualizedContainerService.HintSize="637.6,875.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="EmailAddress" />
           <Variable x:TypeArguments="x:String" Name="EmailPassword" />
@@ -86,7 +86,6 @@
           </Assign.Value>
         </Assign>
         <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="596,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIEXl85Pq6k64f9CqZYtbjwAAAAACAAAAAAAQZgAAAAEAACAAAABXv7dBAkUnygSQ66FaMspWrADPvUiqm6tD7d9aGF5qwAAAAAAOgAAAAAIAACAAAADSW/A2LngucVoKgWSmyARNqd1H2xpgAQR7MICi2lVxZRAAAAAyGB/y+C999JQV/g4agIRQQAAAAFC7sxlaLbASAiYY5FmgUgZ1+FsxMyyLHypn4DUGPWGFhPenEOpTPf8/lANv3AwmkBjiCe77Utc8dFUT0wMiu6w=" Result="[EmailPassword]" />
-        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="596,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[EmailPassword]" />
         <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[EmailAddress]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="596,22.4" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[MailMessages]" OnlyUnreadMessages="True" Password="[EmailPassword]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="10" />
         <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="596,557.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[MailMessages]">
           <ui:ForEach.Body>
